@@ -1,3 +1,10 @@
+:root{
+    --primero: hsl(107, 19%, 55%);
+    --segundo: hsl(0, 0%, 100%);
+    --tercero: hsl(0, 0%, 0%);
+    --cuarto: hsl(29, 67%, 61%);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,8 +13,8 @@
 }
 
 body{
-    background-color: #81A378;
-    color: #ffffff;
+    background-color: var(--primero);
+    color: var(--segundo);
     main{
         display: flex;
         align-items: center;
@@ -17,7 +24,6 @@ body{
             width: 7%;
             border-radius: 50%;
             margin: 20px;
-
         }
         .hash{
             font-weight: 600;
@@ -36,7 +42,6 @@ body{
             line-height: 1.5;
             width: 50%;
         }
-
     }
     .secciones{
         display: flex;
@@ -54,7 +59,8 @@ body{
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #ffffff;
+            color: var(--segundo);
+            transition: all ease-in-out 200ms;
             ion-icon{
                 font-size: 20px;
                 padding-right: 20px;
@@ -62,8 +68,8 @@ body{
             }
         }
         a:hover{
-            background-color: #ffffff !important;
-            color: #000000;
+            background-color: var(--segundo) !important;
+            color: var(--cuarto);
         }
     }
     .mas{
@@ -96,13 +102,11 @@ body{
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background-color: #DE9858;
+        background-color: var(--cuarto);
         height: 10vh;
         letter-spacing: 2px;
     }
 }
-
-
 
 @media (max-width: 600px){
     body{
